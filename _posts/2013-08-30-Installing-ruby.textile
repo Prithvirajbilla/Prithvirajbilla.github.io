@@ -1,0 +1,6 @@
+---
+layout: post
+title:  Installing Ruby
+---
+
+h1.Installing Ruby in Windows / Ubuntu .
