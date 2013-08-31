@@ -1,6 +1,99 @@
 ---
 layout: post
-title:  Installing Ruby
+title:  Installing Ruby & Gem in Windows / Ubuntu
 ---
 
-h1.Installing Ruby in Windows / Ubuntu .
+h1. "{{ page.title }}":hob
+
+[hob]{{page.url}}
+
+p(meta). 31 Aug 2013 - Mumbai
+
+h3. Installing in Ubuntu:
+
+Open a terminal and type the following command:
+
+<pre>
+<code>$ sudo apt-get install rubygems build-essential
+		(or)
+$ sudo apt-get install rubygems</code>
+</pre>
+
+This will install the gem in your Ubuntu Pc / Laptop.
+
+<!--break-->
+
+Sample Output:
+
+<pre>
+<code>Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+ruby1.8-dev rubygems1.8
+Suggested packages:
+rubygems-doc
+The following NEW packages will be installed:
+Do you want to continue? (Y/N)
+etc..</code>
+</pre>
+
+If you want to install ruby interpretor, open terminal and Type:
+
+<pre><code>$ sudo apt-get install ruby </code> </pre>
+
+h4. Verify that gem is working
+
+Type the following command:
+
+<pre><code>$ gem env </code></pre>
+
+Now to install jekyll , type the following command
+
+<pre><code>$ sudo gem install jekyll </code></pre>
+
+If you are behind a proxy server as I do, to install gem you have add some environment variable before you start installing the gem.
+
+<pre><code>$ SET HTTP_PROXY=proxyserver:proxyport
+$ SET HTTP_PROXY_USER=username
+$ SET HTTP_PROXY_PASS=pass
+</code></pre>
+
+Yay!! You installed the jekyll gem.
+
+Libraries or packages in ruby are called as gems.
+
+Now you can install other libraries like RedCloth (for textile markup language, etc.);
+
+h3. Installing in Windows:
+
+The simpler way is by installing RAILS FOR WINDOWS, by which gem is installed in your laptop. or you can directly download the zip file from the "ruby gems website":http://rubygems.org/pages/download. and build the gem. (but you need ruby for it.)
+
+So, Download Rails Installer for "windows":http://railsinstaller.org/en and install it.
+
+After installing the Rails, you can find the gem.bat,gem  file in <code>C:\RailsInstaller\Ruby1.9.3\bin</code> .
+
+Add the <code>C:\RailsInstaller\Ruby1.9.3\bin</code> to the system path as show in the figure below.
+
+!/assets/images/1.jpg!
+
+Now open the command prompt and install all the gems you want.
+
+Now try setting up git.
+
+Git is a distributed version control system released to the public in 2005. The program allows for non-linear development of projects, and can handle large amounts of data effectively by storing it on the local server.
+
+This tutorial will cover two ways to install Git.
+In windows, git is installed along with Rails installer.
+
+To configure github. "(follow this tutorial from github)":https://help.github.com/articles/generating-ssh-keys
+
+In ubuntu, first install git and follow the above tutorial to configure github.
+
+To install git in ubuntu, open terminal and type the following command.
+
+<code>sudo apt-get install git-core</code>
+
+After it finishes downloading, you will have Git installed and ready to use.
+
+Now, we have our environment setup and we are ready to go.
