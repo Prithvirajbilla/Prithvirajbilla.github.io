@@ -1,0 +1,104 @@
+<html>
+<head>
+  <title>Installing Ruby & Gem in Windows / Ubuntu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/assets/jquery.js"></script>
+    <script  src="/assets/bootstrap/js/bootstrap.js" > </script>
+</head>
+<body>
+<div class="container">
+  <div>
+    <a href="/"><img src="/assets/images/header.jpg" /></a>
+  </div>
+  <br/>
+  <div class="page-header" style="text-align:center">
+    <h1> Blog Posts </h1>
+    <small>Jekyll Build </small>
+  </div>
+  <div class="row12">
+    <div class="row8">
+<h1><a href="/2013/08/31/Installing-ruby.html">Installing Ruby &amp; Gem in Windows / Ubuntu</a></h1>
+<p class="meta">31 Aug 2013 &#8211; Mumbai</p>
+<h3>Installing in Ubuntu:</h3>
+<p>Open a terminal and type the following command:</p>
+<pre>
+<code>$ sudo apt-get install rubygems build-essential
+		(or)
+$ sudo apt-get install rubygems</code>
+</pre>
+<p>This will install the gem in your Ubuntu Pc / Laptop.</p>
+<p><!--break--></p>
+<p>Sample Output:</p>
+<pre>
+<code>Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+ruby1.8-dev rubygems1.8
+Suggested packages:
+rubygems-doc
+The following NEW packages will be installed:
+Do you want to continue? (Y/N)
+etc..</code>
+</pre>
+<p>If you want to install ruby interpretor, open terminal and Type:</p>
+<pre><code>$ sudo apt-get install ruby </code> </pre>
+<h4>Verify that gem is working</h4>
+<p>Type the following command:</p>
+<pre><code>$ gem env </code></pre>
+<p>Now to install jekyll , type the following command</p>
+<pre><code>$ sudo gem install jekyll </code></pre>
+<p>If you are behind a proxy server as I do, to install gem you have add some environment variable before you start installing the gem.</p>
+<pre><code>$ SET HTTP_PROXY=proxyserver:proxyport
+$ SET HTTP_PROXY_USER=username
+$ SET HTTP_PROXY_PASS=pass
+</code></pre>
+<p>Yay!! You installed the jekyll gem.</p>
+<p>Libraries or packages in ruby are called as gems.</p>
+<p>Now you can install other libraries like RedCloth (for textile markup language, etc.);</p>
+<h3>Installing in Windows:</h3>
+<p>The simpler way is by installing <span class="caps">RAILS</span> <span class="caps">FOR</span> <span class="caps">WINDOWS</span>, by which gem is installed in your laptop. or you can directly download the zip file from the <a href="http://rubygems.org/pages/download">ruby gems website</a>. and build the gem. (but you need ruby for it.)</p>
+<p>So, Download Rails Installer for <a href="http://railsinstaller.org/en">windows</a> and install it.</p>
+<p>After installing the Rails, you can find the gem.bat,gem  file in <code>C:\RailsInstaller\Ruby1.9.3\bin</code> .</p>
+<p>Add the <code>C:\RailsInstaller\Ruby1.9.3\bin</code> to the system path as show in the figure below.</p>
+<p><img src="/assets/images/1.jpg" alt="" /></p>
+<p>Now open the command prompt and install all the gems you want.</p>
+<p>Now try setting up git.</p>
+<p>Git is a distributed version control system released to the public in 2005. The program allows for non-linear development of projects, and can handle large amounts of data effectively by storing it on the local server.</p>
+<p>This tutorial will cover two ways to install Git.<br />
+In windows, git is installed along with Rails installer.</p>
+<p>To configure github. <a href="https://help.github.com/articles/generating-ssh-keys">(follow this tutorial from github)</a></p>
+<p>In ubuntu, first install git and follow the above tutorial to configure github.</p>
+<p>To install git in ubuntu, open terminal and type the following command.</p>
+<p><code>sudo apt-get install git-core</code></p>
+<p>After it finishes downloading, you will have Git installed and ready to use.</p>
+<p>Now, we have our environment setup and we are ready to go.</p>
+</div>
+
+  </div>
+  <br/>
+  <br/>
+
+</div>
+<footer class="footer">
+      <div class="container">
+        <p> Created By <a href="http://github.com/prithvirajbilla">Prithviraj Billa </a> </p>
+        <p> Build with the tool  <a href="http://jekyllrb.com/"> Jekyll Rb </a> </p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.</p>
+        <ul class="nav">
+          <li><a href="http://prithvirajbilla.com">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+</body>

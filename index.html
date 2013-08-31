@@ -4,13 +4,13 @@ layout: default
 
   <ul class="posts">
     {% for post in site.posts %}
-	   {% if post.content.size > 2000 %}
-	      {{ post.content | truncatewords: 300 }} <!-- bad! content gives you rendered html and you will truncate in the middle of a node -->
-	      <br/>
+	   <li>
+ 		{{ post.content | split:'<!--break-->' | first }}
+	   {% if post.content contains '<!--break-->' %}
 	      <a href="{{ post.url }}" class="btn btn-primary" style="float:right">read more</a>
-	   {% else %}
-	      {{ post.content }}
+	      <br/>
 	   {% endif %}
+	   	  <br/>
       </li>
     {% endfor %}
   </ul>

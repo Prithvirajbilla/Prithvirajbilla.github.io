@@ -1,0 +1,196 @@
+<html>
+<head>
+  <title>Getting started with Jekyll</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/assets/jquery.js"></script>
+    <script  src="/assets/bootstrap/js/bootstrap.js" > </script>
+</head>
+<body>
+<div class="container">
+  <div>
+    <a href="/"><img src="/assets/images/header.jpg" /></a>
+  </div>
+  <br/>
+  <div class="page-header" style="text-align:center">
+    <h1> Blog Posts </h1>
+    <small>Jekyll Build </small>
+  </div>
+  <div class="row12">
+    <div class="row8">
+<h1><a href="/2013/08/31/Working-with-jekyll.html">Getting started with Jekyll</a></h1>
+<p class="meta">31 Aug 2013 &#8211; Mumbai</p>
+<h4>Why Jekyll?</h4>
+<p>Jekyll gives you power to do whatever you want and its very simple, light weight and not so complicated. No database connections required. You have entire control over the layout of your blog. (You can create your own themes,etc. ) . You can write your content in your favourite markup language and just git commit to repo. Thats it. Your blog post is done. (Its so awesome. :P )</p>
+<p><!--break--></p>
+<h3>Getting Started!!</h3>
+<pre><code>$ jekyll new my-awesome-site
+$ cd my-awesome-site
+$ jekyll serve --watch
+# =&gt; The current folder will be generated into ./_site,
+#    watched for changes, and regenerated automatically.
+</code></pre>
+<h3>Directory Structure:</h3>
+<pre><code>
+├── _config.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.textile
+|   └── on-simplicity-in-technology.markdown
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   └── 2009-04-26-barcamp-boston-4-roundup.textile
+├── _site
+└── index.html
+</code></pre>
+<h3>Configure your site in _config.yml</h3>
+<p>example _config.yml</p>
+<pre><code>
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+include:     ['.htaccess']
+exclude:     []
+keep_files:  ['.git','.svn']
+timezone:    nil
+
+future:      true
+show_drafts: nil
+limit_posts: 0
+pygments:    true
+
+relative_permalinks: true
+
+permalink:  date
+paginate_path: 'page:num'
+
+markdown:      maruku
+markdown_ext:  markdown,mkd,mkdn,md
+textile_ext:   textile
+
+excerpt_separator: "\n\n"
+
+safe:        false
+watch:       false    # deprecated
+server:      false    # deprecated
+host:        0.0.0.0
+port:        4000
+baseurl:     /
+url:         http://localhost:4000
+lsi:         false
+
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
+
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
+
+redcloth:
+  hard_breaks: true
+</code></pre>
+<p>For more details, <a href="http://jekyllrb.com/docs/configuration/">refer jekyll conf</a></p>
+<h3>Creating Layouts</h3>
+<p>Create your own layouts. use bootstrap or zurb whatever. place them in the _layouts folder.</p>
+<p>Keep all your assets in folder named assets(any name without underscore in the beginning.)</p>
+<p>Sample Layout: (_layouts/default.html)</p>
+<pre><code>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Getting started with Jekyll&lt;/title&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'&gt;
+    &lt;link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" media="screen"&gt;
+&lt;link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'&gt;
+    &lt;link rel="stylesheet" type="text/css" href="/assets/style.css"&gt;
+
+    &lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="../bower_components/bootstrap/assets/js/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="../bower_components/bootstrap/assets/js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+    &lt;script type="text/javascript" src="/assets/jquery.js"&gt;&lt;/script&gt;
+    &lt;script  src="/assets/bootstrap/js/bootstrap.js" &gt; &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="container"&gt;
+  &lt;div&gt;
+    &lt;a href="/"&gt;&lt;img src="/assets/images/header.jpg" /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;br/&gt;
+  &lt;div class="page-header" style="text-align:center"&gt;
+    &lt;h1&gt; Blog Posts &lt;/h1&gt;
+    &lt;small&gt;Jekyll Build &lt;/small&gt;
+  &lt;/div&gt;
+  &lt;div class="row12"&gt;
+    \{\{ content \}}
+  &lt;/div&gt;
+  &lt;br/&gt;
+  &lt;br/&gt;
+
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>Sample Layout : _layouts/post.html</p>
+<pre><code>
+---
+layout: default
+---
+&lt;div class="row8"&gt;
+\{\{ content \}}
+&lt;/div&gt;
+</code></pre>
+</div>
+
+  </div>
+  <br/>
+  <br/>
+
+</div>
+<footer class="footer">
+      <div class="container">
+        <p> Created By <a href="http://github.com/prithvirajbilla">Prithviraj Billa </a> </p>
+        <p> Build with the tool  <a href="http://jekyllrb.com/"> Jekyll Rb </a> </p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.</p>
+        <ul class="nav">
+          <li><a href="http://prithvirajbilla.com">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+</body>
