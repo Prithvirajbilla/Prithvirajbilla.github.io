@@ -1,0 +1,67 @@
+<html>
+<head>
+  <title>Deploying to Github pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/assets/jquery.js"></script>
+    <script  src="/assets/bootstrap/js/bootstrap.js" > </script>
+</head>
+<body>
+<div class="container">
+  <div>
+    <a href="/"><img src="/assets/images/header.jpg" /></a>
+  </div>
+  <br/>
+  <div class="page-header" style="text-align:center">
+    <h1> Blog Posts </h1>
+    <small>Jekyll Build </small>
+  </div>
+  <div class="row12">
+    <div class="row8">
+<h1><a href="/2013/08/31/deploying-to-github-pages.html">Deploying to Github pages</a></h1>
+<p class="meta">31 Aug 2013 &#8211; Mumbai</p>
+<p>Create an account in the <a href="http://www.github.com">github.com</a> . After creating the account create an empty repo of name username.github.io . where username is the github username.</p>
+<p><!--break--></p>
+<p>In your site directory</p>
+<pre><code>$ git int
+## initialises the repo
+$ git add .
+## adds all the files to the repo
+$ git commit -m "message"
+##git commits to the repo
+$ git remote add origin git@github.com:Username/username.github.io
+## add the remote repo
+$ git push -u origin master
+</code></pre>
+<p>Now go to the <a href="http://www.github.com">github website</a> and navigate to your github repo page and go to settings tab. You will see something like this.</p>
+<p><img src="/assets/images/2.jpg" alt="" /></p>
+<p>Now go to the url, your blog will be up in 10 minutes.</p>
+<p>Hurray , you have created your blog!!!!</p>
+</div>
+
+  </div>
+  <br/>
+  <br/>
+
+</div>
+<footer class="footer">
+      <div class="container">
+        <p> Created By <a href="http://github.com/prithvirajbilla">Prithviraj Billa </a> </p>
+        <p> Build with the tool  <a href="http://jekyllrb.com/"> Jekyll Rb </a> </p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.</p>
+        <ul class="nav">
+          <li><a href="http://prithvirajbilla.com">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+</body>

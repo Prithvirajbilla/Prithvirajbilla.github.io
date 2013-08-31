@@ -1,0 +1,38 @@
+---
+layout: post
+title: Deploying to Github pages
+---
+
+h1. "{{ page.title }}":hob
+
+[hob]{{page.url}}
+
+p(meta). 31 Aug 2013 - Mumbai
+
+
+Create an account in the "github.com":http://www.github.com . After creating the account create an empty repo of name username.github.io . where username is the github username.
+
+<!--break-->
+
+In your site directory
+
+<pre><code>$ git int
+## initialises the repo
+$ git add .
+## adds all the files to the repo
+$ git commit -m "message"
+##git commits to the repo
+$ git remote add origin git@github.com:Username/username.github.io
+## add the remote repo
+$ git push -u origin master
+</code></pre>
+
+Now go to the "github website":http://www.github.com and navigate to your github repo page and go to settings tab. You will see something like this.
+
+!/assets/images/2.jpg!
+
+Now go to the url, your blog will be up in 10 minutes.
+
+Hurray , you have created your blog!!!!
+
+

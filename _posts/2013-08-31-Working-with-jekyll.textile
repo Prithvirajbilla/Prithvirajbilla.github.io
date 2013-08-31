@@ -173,3 +173,30 @@ layout: default
 \{\{ content \}}
 </div>
 </code></pre>
+
+sample Post : _posts/2013-08-30-Jekyll-is-awesome.textile
+
+<pre><code>---
+layout: post
+title: Jekyll is Awesome
+---
+
+h1. "{{ page.title }}":hob
+
+[hob]{{page.url}}
+
+p(meta). 30 Aug 2013 - Mumbai
+
+Ruby. Its one of the powerfull Language. A little Description of Ruby,Ruby is a dynamic, reflective, general-purpose object-oriented programming language that combines syntax inspired by Perl with Smalltalk-like features. It was also influenced by Eiffel and Lisp. Ruby was first designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+
+Jekyll is the ruby gem which transform your plain text into static websites and blogs, No Databases are required, Just "git":http://www.git-scm.org the posts. (Because I believe in git.). And the good news is We can host our blog using "github pages":http://www.github.com 
+
+So I'm going to do a short tutorial how to deploy your jekyll-blog on github pages. (and all how to install ruby , git on your PC)
+
+Hope this helps. :)
+</code></pre>
+
+
+Hope this helps.
+
+"References":http://jekyllrb.com/

@@ -1,0 +1,11 @@
+---
+layout: post
+title: Mapping your domain name to blog
+---
+
+h1. "{{ page.title }}":hob
+
+[hob]{{page.url}}
+
+p(meta). 31 Aug 2013 - Mumbai
+
