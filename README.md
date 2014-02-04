@@ -13,7 +13,7 @@ This is the code for my blog(which is tutorial on how to make jekyll blog and ho
 
 Bootstrap is used for the templating.
 
-located at [Blog](http://jekyll.prithvirajbilla.com).
+located at [Blog](http://blog.prithvirajbilla.com).
 
 ### License
 
