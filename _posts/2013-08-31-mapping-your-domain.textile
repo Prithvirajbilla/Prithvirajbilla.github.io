@@ -3,11 +3,6 @@ layout: post
 title: Mapping your domain name to blog
 ---
 
-h1. "{{ page.title }}":hob
-
-[hob]{{page.url}}
-
-p(meta). 31 Aug 2013 - Mumbai
 
 "Setting up a custom domain with Pages":https://help.github.com/articles/setting-up-a-custom-domain-with-pages
 
