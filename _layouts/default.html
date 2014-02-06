@@ -1,49 +1,33 @@
-<html>
-<head>
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jekyll">
-  <meta name="keywords" content="ruby,ror,ruby on rails,github pages,jekyll">
-  <meta name="author" content="Prithviraj Billa">
-<meta charset="UTF-8">    <link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" media="screen">
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
-      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="/assets/jquery.js"></script>
-    <script  src="/assets/bootstrap/js/bootstrap.js" > </script>
-</head>
-<body>
-<div class="container">
-  <div>
-    <a href="/"><img src="/assets/images/header.jpg" /></a>
-  </div>
-  <br/>
-  <div class="page-header" style="text-align:center">
-    <h1> Blog Posts </h1>
-    <small>Jekyll Build </small>
-  </div>
-  <div class="row12">
-    {{ content }}
-  </div>
-  <br/>
-  <br/>
+  {% include head.html %}
 
-</div>
-<footer class="footer">
-      <div class="container">
-        <p> Created By <a href="http://github.com/prithvirajbilla">Prithviraj Billa </a> </p>
-        <p> Build with the tool  <a href="http://jekyllrb.com/"> Jekyll Rb </a> </p>
-        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.</p>
-        <ul class="nav">
-          <li><a href="http://prithvirajbilla.com">Blog</a></li>
-        </ul>
+  <body>
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <h1>{{ site.title }}</h1>
+        <p class="lead">{{ site.description }}</p>
+
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="https://github.com/mdo/hyde/archive/v{{ site.version }}.zip">Download</a>
+            </li>
+            <li>
+              <a href="https://github.com/mdo/hyde">GitHub project</a>
+            </li>
+            <li>Currently v{{ site.version }}</li>
+          </ul>
+          <p>&copy; 2014. {{ site.author.name }} All rights reserved.</p>
+        </div>
       </div>
-    </footer>
-    
-</body>
+    </header>
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+  </body>
+</html>
