@@ -3,11 +3,6 @@ layout: post
 title: Deploying to Github pages
 ---
 
-h1. "{{ page.title }}":hob
-
-[hob]{{page.url}}
-
-p(meta). 31 Aug 2013 - Mumbai
 
 
 Create an account in the "github.com":http://www.github.com . After creating the account create an empty repo of name username.github.io . where username is the github username.
