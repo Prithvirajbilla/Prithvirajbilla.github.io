@@ -3,11 +3,6 @@ layout: post
 title:  Installing Ruby & Gem in Windows / Ubuntu
 ---
 
-h1. "{{ page.title }}":hob
-
-[hob]{{page.url}}
-
-p(meta). 31 Aug 2013 - Mumbai
 
 h3. Installing in Ubuntu:
 
