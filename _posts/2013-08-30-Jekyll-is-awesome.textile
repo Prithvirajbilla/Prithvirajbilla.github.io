@@ -5,7 +5,6 @@ title: Jekyll is Awesome
 
 
 
-p(meta). 30 Aug 2013 - Mumbai
 
 Ruby. Its one of the powerfull Language. A little Description of Ruby,Ruby is a dynamic, reflective, general-purpose object-oriented programming language that combines syntax inspired by Perl with Smalltalk-like features. It was also influenced by Eiffel and Lisp. Ruby was first designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
 
