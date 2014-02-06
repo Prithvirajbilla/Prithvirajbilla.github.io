@@ -4,7 +4,6 @@ title: Jekyll is Awesome
 ---
 
 
-[hob]{{page.url}}
 
 p(meta). 30 Aug 2013 - Mumbai
 
