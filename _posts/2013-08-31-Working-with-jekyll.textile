@@ -3,11 +3,6 @@ layout: post
 title: Getting started with Jekyll
 ---
 
-h1. "{{ page.title }}":hob
-
-[hob]{{page.url}}
-
-p(meta). 31 Aug 2013 - Mumbai
 
 h4. Why Jekyll?
 
