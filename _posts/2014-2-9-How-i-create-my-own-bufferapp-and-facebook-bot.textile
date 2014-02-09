@@ -8,7 +8,7 @@ title: How I made my own buffer app and the facebook bot
 This is one of the craziest hack that i have ever done!. I have made my own buffer app (I guess you all know what the bufferapp is) and the facebook bot (Which posts to the fb page, the best and the top links of the HN after few hours).
 
 
-h4. Hack Recipe:
+h3. Hack Recipe:
 
 Things I used for this hack.
 
