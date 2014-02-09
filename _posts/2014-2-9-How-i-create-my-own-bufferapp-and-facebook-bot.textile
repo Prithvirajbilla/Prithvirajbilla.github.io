@@ -1,11 +1,24 @@
 ---
 layout: post
-title: How i made my own buffer app and the facebook bot
+title: How I made my own buffer app and the facebook bot
 ---
 
 
 
-This is one of the craziest hack i have done!. I have made my own buffer app (I guess you all know what the bufferapp is)
-and the facebook bot (Which posts to the fb page, the best and the top links of the HN after few hours).
+This is one of the craziest hack that i have ever done!. I have made my own buffer app (I guess you all know what the bufferapp is) and the facebook bot (Which posts to the fb page, the best and the top links of the HN after few hours).
+
+
+h4. Hack Recipe:
+
+Things I used for this hack.
+
+<ol>
+<li> <a href="http://ifft.com"> IFTTT Account</a> </li>
+<li> Dropbox account </li>
+<li> Free mailgun account to send emails </li>
+<li> <a href="http://mashape.com"> Mashape Account</a> for HN </li>
+<li> gmail account </li>
+<li> Python </li>
+</ol>
 
 
