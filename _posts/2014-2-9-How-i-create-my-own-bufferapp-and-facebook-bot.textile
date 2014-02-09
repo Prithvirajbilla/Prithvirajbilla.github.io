@@ -1,0 +1,11 @@
+---
+layout: post
+title: How i made my own buffer app and the facebook bot
+---
+
+
+
+This is one of the craziest hack i have done!. I have made my own buffer app (I guess you all know what the bufferapp is)
+and the facebook bot (Which posts to the fb page, the best and the top links of the HN after few hours).
+
+
