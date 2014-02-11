@@ -43,7 +43,9 @@ Then i send the contents of the text file as an email and then it will posted to
 How simple is that!!
 
 
-h3. And the second app, FB Bot which post the top HN links after few hours
+h3. And the second app(FB bot)
+
+FB Bot which post the top HN links after few hours
 First i tried to scrape the HN site , but godbless my github search, I found the code for it already.
 
 Now I'm using the previous IFTTT recipe and i sending an email.
