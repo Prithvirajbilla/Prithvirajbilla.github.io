@@ -23,7 +23,7 @@ Things I used for this hack.
 </ol>
 
 
-"The First (buffer app) what i have done:"
+h3. What i have done for the Buffer App
 
 First the functionality is, I should be able to schedule my fb posting. So, I made a recipe in IFTTT " IF i recieve a mail from 
 
@@ -41,3 +41,6 @@ This txt is scheduled to be posted on feb 13, 5 pm;
 Then i send the contents of the text file as an email and then it will posted to fb account.
 
 How simple is that!!
+
+
+
