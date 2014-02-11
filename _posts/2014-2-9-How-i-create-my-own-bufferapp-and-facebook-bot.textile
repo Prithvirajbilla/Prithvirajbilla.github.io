@@ -29,6 +29,8 @@ First the functionality is, I should be able to schedule my fb posting. So, I ma
 
 some email address and then post the email to facebook account".
 
+!http://s9.postimg.org/aoqesxgb3/image.png!
+
 This is what i have done. I have synced the dropbox folder to the vps. I'm running a cron job on the VPS to check for the new files in the folder every half an hour. If there is a text file then i will read the name of the text file and determine when is it scheduled to post and i will post it accordingly.
 
 <pre><code>
