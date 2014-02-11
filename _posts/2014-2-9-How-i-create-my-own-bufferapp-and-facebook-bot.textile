@@ -43,4 +43,26 @@ Then i send the contents of the text file as an email and then it will posted to
 How simple is that!!
 
 
+h3. And the second app, FB Bot which post the top HN links after few hours
+First i tried to scrape the HN site , but godbless my github search, I found the code for it already.
 
+Now I'm using the previous IFTTT recipe and i sending an email.
+
+The reason I'm using mailgun, is sending the email is very simple:
+<pre><code>
+from conf import *
+import requests
+def send_simple_message(subject, content):
+    return requests.post(
+            "https://api.mailgun.net/v2/sandbox7930.mailgun.org/messages",
+            auth=("api", mailgunkey),
+            data={"from": FROM_MAIL,
+                  "to": TO_MAIL,
+                  "subject": subject,
+                  "text": content})
+</code></pre>
+
+Wow, that simple it is.
+
+You can view my code here.
+<a href="https://github.com/Prithvirajbilla/bufferapplike"> Github link </a>
