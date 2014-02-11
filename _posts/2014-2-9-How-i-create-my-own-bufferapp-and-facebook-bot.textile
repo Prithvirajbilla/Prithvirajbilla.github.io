@@ -67,4 +67,4 @@ def send_simple_message(subject, content):
 Wow, that simple it is.
 
 You can view my code here.
-<a href="https://github.com/Prithvirajbilla/bufferapplike"> Github link </a>
+<button href="https://github.com/Prithvirajbilla/bufferapplike"> Github link </button>
