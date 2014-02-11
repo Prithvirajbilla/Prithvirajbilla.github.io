@@ -25,9 +25,7 @@ Things I used for this hack.
 
 h3. What i have done for the Buffer App
 
-First the functionality is, I should be able to schedule my fb posting. So, I made a recipe in IFTTT " IF i recieve a mail from 
-
-some email address and then post the email to facebook account".
+First the functionality is, I should be able to schedule my fb posting. So, I made a recipe in IFTTT " IF i recieve a mail from some email address and then post the email to facebook account".
 
 !http://s9.postimg.org/aoqesxgb3/image.png!
 
