@@ -19,6 +19,25 @@ Things I used for this hack.
 <li> <a href="http://mashape.com"> Mashape Account</a> for HN </li>
 <li> gmail account </li>
 <li> Python </li>
+<li> A VPS or something that can cron jobs</li>
 </ol>
 
 
+"The First (buffer app) what i have done:"
+
+First the functionality is, I should be able to schedule my fb posting. So, I made a recipe in IFTTT " IF i recieve a mail from 
+
+some email address and then post the email to facebook account".
+
+This is what i have done. I have synced the dropbox folder to the vps. I'm running a cron job on the VPS to check for the new files in the folder every half an hour. If there is a text file then i will read the name of the text file and determine when is it scheduled to post and i will post it accordingly.
+
+<pre><code>
+For example Filename will be:
+2014-2-13 17:00 | archive.txt
+This txt is scheduled to be posted on feb 13, 5 pm;
+</code>
+</pre>
+
+Then i send the contents of the text file as an email and then it will posted to fb account.
+
+How simple is that!!
