@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How I made my own buffer app and the facebook bot
+title: How I created a bufferapp clone and the auto facebook poster
 ---
 
 
