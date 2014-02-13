@@ -12,5 +12,92 @@ You have to find the length of the longest palindromic sustring which is 5 in th
 First I want to discuss about the properties of the palindromes.
 
 Let us suppose that we have a palindrome S.
-the left most character is L , the right most character is R and the center of the palindrome is C.
+the left most character is L , the right most character is R and the center of the palindrome is C.And let suppose there exists a palindrome whose center is between the L and C & call this one L1 and there exists an another palindrome whose center exists between the C and R.
 
+Now, if S[0:k]  is a palindrome than S[1:k-1] is also palindrome.
+
+If L1 forms a palindrome that doesn't extend the Left most character of the S palindrome, than the R1 also forms the same palindrome. I mean L1==R1 is true.
+
+If L1 forms a palindrome that does extend the left most character of the S palindrome, then 
+<pre>
+=|===|========|===========|========|========|======
+LL'  L        L`          C        R'        R
+</pre>
+
+The palindrome LL'-L'-RL' is the longest palindrome it can form, but still the L-L'-something is palindrome (on rule 1) so, R' should have minimum palindromic length of L-L'. (something gibberish you will get a hang of it later).
+
+This is the most non trivial algorithm I have ever seen (upto now)
+
+given string S="banana"
+construct a new string like this
+T="#b#a#n#a#n#a#" with 2*n+1 characters if the n is the number of the characters in the given string.
+
+now we define a array P where P[k] defines the length of the radius of longest palindromic substring ((int)length/2) that can be formed by the T[k] character as the center.
+
+
+P[0] = 0
+P[1] = 1
+
+now we define three variables C,L,R. C is the center of the latest known longest palindrome right now. and L and R are the left and right most positions of the latest known longest palindrome now.
+here C = 1; L =0; R=2;
+
+the algorithm is :
+i' = C-(i-C);
+if P[i'] < R-i:
+  P[i] = P[i']
+else:
+  P[i] >= P[i']
+
+Yup thats it.
+
+For example;
+<pre><code>
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	0	0	0	0	0	0	0	0	0	0	
+C : 1 L : 0 R: 2
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	0	0	0	0	0	0	0	0	0	0	
+C : 1 L : 0 R: 2
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	0	0	0	0	0	0	0	0	
+C : 3 L : 2 R: 4
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	0	0	0	0	0	0	0	0	
+C : 3 L : 2 R: 4
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	3	0	0	0	0	0	0	0	
+C : 5 L : 2 R: 8
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	3	0	0	0	0	0	0	0	
+C : 5 L : 2 R: 8
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	3	0	5	0	0	0	0	0	
+C : 7 L : 2 R: 12
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	3	0	5	0	0	0	0	0	
+C : 7 L : 2 R: 12
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	3	0	5	0	3	0	0	0	
+C : 9 L : 6 R: 12
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	3	0	5	0	3	0	0	0	
+C : 9 L : 6 R: 12
+0	1	2	3	4	5	6	7	8	9	10	11	12	
+#	b	#	a	#	n	#	a	#	n	#	a	#	
+0	1	0	1	0	3	0	5	0	3	0	1	0	
+C : 11 L : 10 R: 12
+</code></pre>
+
+links:
+http://en.wikipedia.org/wiki/Longest_palindromic_substring
+http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html
