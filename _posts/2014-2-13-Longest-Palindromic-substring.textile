@@ -19,10 +19,10 @@ Now, if S[0:k]  is a palindrome than S[1:k-1] is also palindrome.
 If L1 forms a palindrome that doesn't extend the Left most character of the S palindrome, than the R1 also forms the same palindrome. I mean L1==R1 is true.
 
 If L1 forms a palindrome that does extend the left most character of the S palindrome, then 
-<pre>
+<pre><code>
 =|===|========|===========|========|========|======
 LL'  L        L`          C        R'        R
-</pre>
+</code></pre>
 
 The palindrome LL'-L'-RL' is the longest palindrome it can form, but still the L-L'-something is palindrome (on rule 1) so, R' should have minimum palindromic length of L-L'. (something gibberish you will get a hang of it later).
 
@@ -99,5 +99,5 @@ C : 11 L : 10 R: 12
 </code></pre>
 
 links:
-http://en.wikipedia.org/wiki/Longest_palindromic_substring
-http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html
+<a href="http://en.wikipedia.org/wiki/Longest_palindromic_substring"> http://en.wikipedia.org/wiki/Longest_palindromic_substring</a>
+<a href="http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html">http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html</a>
