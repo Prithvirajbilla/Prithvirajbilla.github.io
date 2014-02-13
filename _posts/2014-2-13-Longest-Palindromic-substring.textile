@@ -1,0 +1,16 @@
+---
+layout: post
+title: Longest palindromic substring
+---
+
+
+Longest palindromic substring.
+
+Given a string for example : "banana"
+You have to find the length of the longest palindromic sustring which is 5 in this case.
+
+First I want to discuss about the properties of the palindromes.
+
+Let us suppose that we have a palindrome S.
+the left most character is L , the right most character is R and the center of the palindrome is C.
+
