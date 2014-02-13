@@ -34,9 +34,10 @@ T="#b#a#n#a#n#a#" with 2*n+1 characters if the n is the number of the characters
 
 now we define a array P where P[k] defines the length of the radius of longest palindromic substring ((int)length/2) that can be formed by the T[k] character as the center.
 
-
+<pre><code>
 P[0] = 0
 P[1] = 1
+</code></pre>
 
 now we define three variables C,L,R. C is the center of the latest known longest palindrome right now. and L and R are the left and right most positions of the latest known longest palindrome now.
 here C = 1; L =0; R=2;
