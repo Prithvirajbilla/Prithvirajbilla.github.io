@@ -43,11 +43,13 @@ now we define three variables C,L,R. C is the center of the latest known longest
 here C = 1; L =0; R=2;
 
 the algorithm is :
+<pre><code>
 i' = C-(i-C);
 if P[i'] < R-i:
   P[i] = P[i']
 else:
   P[i] >= P[i']
+</code></pre>
 
 Yup thats it.
 
