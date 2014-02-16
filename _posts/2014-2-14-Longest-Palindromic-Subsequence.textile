@@ -1,0 +1,30 @@
+---
+layout: post
+title: Longest Palindromic subsequence
+---
+Given : a string S
+Output : The length of the longest palindromic subsequence.
+
+Let the length of the string be n;
+S[0.n-1]
+
+This is can solved easily using dynamic programming.
+
+Let us define a 2D array OPT[][],
+where OPT[i][j] defines the length of the longest palindromic subsequence that can formed using the substring S[i][j].
+<pre><code>
+If S[i]==S[j]
+	OPT[i][j] = OPT[i+1][j-1]+2;
+else
+	OPT[i][j] = max(OPT[i+1][j],OPT[i][j-1]);
+</code></pre>
+For example let the string be
+S= "banana":
+<pre><code>
+		OPT[0][5]
+		/	\
+	    OPT[1][5] 	 OPT[0][4]
+	   /     \           /\
+      OPT[2][5] OPT[1][4]   .....
+</code></pre>
+
