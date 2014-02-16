@@ -12,6 +12,12 @@ This is can solved easily using dynamic programming.
 
 Let us define a 2D array OPT[][],
 where OPT[i][j] defines the length of the longest palindromic subsequence that can formed using the substring S[i][j].
+
+If S[i] and S[j] are equal then OPT[i][j] equals OPT[i+1][j-1]+2
+
+else:
+	OPT[i][j] = max(OPT[i+1][j],OPT[i][j-1])
+
 <pre><code>
 If S[i]==S[j]
 	OPT[i][j] = OPT[i+1][j-1]+2;
