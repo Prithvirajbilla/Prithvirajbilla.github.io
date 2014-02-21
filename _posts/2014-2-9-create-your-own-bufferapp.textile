@@ -1,0 +1,61 @@
+---
+layout: post
+title: Create your own bufferapp
+---
+
+h3. What is a bufferapp?
+
+
+Bufferapp schedules all the content which you find on internet to be posted all day to increase social presence.
+
+h3. Idea
+
+
+Its simple actually.
+
+Thing you might need.
+
+* [IFTTT account] (https://ifttt.com)
+* dropbox account
+* server which can run cron jobs
+
+First whenever I want to schedule a post or the content i find on the internet, i save them in text files in the dropbox folder with certain format like 
+
+The filename should be yyyy-mm-dd HH:MM | name_of_the_post.txt
+
+so it is scheduled to be posted on that time.
+
+Now we can create  IFTTT recipes for the posting action.
+whenever i send a mail to trigger@ifttt.com the post is posted to fb | twitter | other social media.
+!http://s9.postimg.org/aoqesxgb3/image.png!
+
+What i did was, i was using a free mailgun account. I made a ifttt recipe such that whenever i recieve a new mail from XXX@mailgun.com i'm posting the mail to the social media.
+
+I'm running a cron job for every few seconds.
+
+h3. Other ideas
+
+There exists an IFTTT recipe,
+While we store a link (or mark it as view later in pocket) =>  a txt file will be saved to dropbox (but with different name). if we work a way around such that we can save it directly save with the required name we wanted.
+that would be great.
+
+
+
+And the reason why I'm using mailgun, is sending the email is very simple:
+<pre><code>
+from conf import *
+import requests
+def send_simple_message(subject, content):
+    return requests.post(
+            "https://api.mailgun.net/v2/sandbox7930.mailgun.org/messages",
+            auth=("api", mailgunkey),
+            data={"from": FROM_MAIL,
+                  "to": TO_MAIL,
+                  "subject": subject,
+                  "text": content})
+</code></pre>
+
+Wow, that simple it is.
+
+You can view my code here.
+<a href="https://github.com/Prithvirajbilla/bufferapplike"> Github link for code </a>
