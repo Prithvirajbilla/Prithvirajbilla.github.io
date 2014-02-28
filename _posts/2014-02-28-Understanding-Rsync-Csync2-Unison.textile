@@ -77,14 +77,13 @@ h4. What is Unison?
 Unison is also synchroniser which use the same rsync algorithm.
 
 h4. Some differences between rsync and csync2.
-<div class="table_div">
 
+table{border:1px solid black}.
 | rsync | csync2 |
 | Its used for mirroring | Its synchronizer |
 | Its doesn't have information of the previous changes | It stores all the previous changes in a database |
 | Any one can push the changes | Only the machines on which the changes are performed can push the changes |
 
-</div>
 
 refernce links : 
 <a href="http://oss.linbit.com/csync2/paper.pdf">http://oss.linbit.com/csync2/paper.pdf</a>
