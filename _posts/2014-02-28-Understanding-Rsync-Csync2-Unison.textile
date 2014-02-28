@@ -76,12 +76,13 @@ h4. What is Unison?
 
 Unison is also synchroniser which use the same rsync algorithm.
 
-h4. some differences between rsync and csync2
+h4. Some differences between rsync and csync2.
 
 | rsync | csync2 |
 | Its used for mirroring | Its synchronizer |
 | Its doesn't have information of the previous changes | It stores all the previous changes in a database |
 | Any one can push the changes | Only the machines on which the changes are performed can push the changes |
 
-refernce links : http://oss.linbit.com/csync2/paper.pdf
-                http://rsync.samba.org/how-rsync-works.html
+refernce links : 
+<a href="http://oss.linbit.com/csync2/paper.pdf">http://oss.linbit.com/csync2/paper.pdf</a>
+<a href="http://rsync.samba.org/how-rsync-works.html">http://rsync.samba.org/how-rsync-works.html</a>
