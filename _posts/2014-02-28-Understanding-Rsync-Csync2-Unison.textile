@@ -58,14 +58,17 @@ By merging A and B, we are basically getting the file B. If there are changes in
 </code></pre>
 
 h4. Three Way merge.
+
 This way of merging succeds if there are changes in both files.
 Blocks that have changed in neither of the files will be left as they are, Block changed in one file will be added to the new file.blocks which are changed in both files,user will be asked to resolve the conflicts. 
 
 h4. Recursive three way merge.
+
 If two branches doesn't have unique lowest common ancestor, then it merges those ancestors to form another ancestor and continues this process recursively.
 This technique is incorporated by git.
 
 h4. What is Unison?
+
 Unison is also synchroniser which use the same rsync algorithm.
 
 h4. some differences between rsync and csync2
