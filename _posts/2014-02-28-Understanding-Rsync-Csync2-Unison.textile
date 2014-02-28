@@ -79,7 +79,6 @@ Unison is also synchroniser which use the same rsync algorithm.
 h4. Some differences between rsync and csync2.
 
 table{border:1px solid black}.
-tr{border:1px solid black}.
 | rsync | csync2 |
 | Its used for mirroring | Its synchronizer |
 | Its doesn't have information of the previous changes | It stores all the previous changes in a database |
