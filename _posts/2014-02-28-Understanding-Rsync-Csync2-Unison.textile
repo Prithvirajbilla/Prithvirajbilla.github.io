@@ -39,11 +39,16 @@ h4. Two way merge.
 Two way merge is simple. you have two branches suppose branch A and branch B.both branches started from a common ancestor main and A is same as main (ancestor). But there are some changes in branch B. then the merging of Branch A and Branch B is two way merge.
 <pre><code>
 For more clarity:
-Brach main:			Branch A:
-function awesome()	                function awesome()
-{		                {				
+Brach main:			
+function awesome()                              
+{		                				
 
-};			};
+};                                              
+Branch A:
+function awesome()                              
+{		                				
+
+};                                              
 
 Branch B:
 function awesome()
