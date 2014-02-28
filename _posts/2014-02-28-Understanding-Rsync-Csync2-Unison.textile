@@ -6,11 +6,11 @@ title: Understanding file synchronisation.
 The below blog post is my understanding of the Rsync, Csync2, unison and the git merging techniques to develop a awesome synchronizer.
 
 
-h5. What is rsync?
+h4. What is rsync?
 
 rsync is simply a program which manages to minimise the data transfer when it has to sync the files and directories (or to reflect the changes done on one host to other host.)
 
-h5. How rsyn works?
+h4. How rsyn works?
 
 Sending the whole data of file is meaning less if we are syncing the similar files. Instead of sending the whole data, we send only the changes.
 
@@ -20,11 +20,11 @@ Host A divides the file a into some blocks of specific width and calculates the 
 
 rsync doesn't the store the state of the previous versions of the file. rather it communicates the present state od the file with other hosts.
 
-h5. What is csync2?
+h4. What is csync2?
 
 csync2 is cluster asynchronous file synchronization. (As it is asynchronus, this is will be fast).
 
-h5. How csync2 works?
+h4. How csync2 works?
 
 csync2 creates a database in the host and stores the changes in the database.In this approach implies that
 csync2 can only push changes from the machine on which the changes has been performed to the other machines in the cluster.
@@ -34,16 +34,16 @@ So this is how it works, when we sync two hosts.
 Csync finds a lowest common unique ancestor of the two hosts and does three way merge. There are so many type conflict resolving techniques incorporated in the csync2.
 
 
-h5. Two way merge.
+h4. Two way merge.
 
 Two way merge is simple. you have two branches suppose branch A and branch B.both branches started from a common ancestor main and A is same as main (ancestor). But there are some changes in branch B. then the merging of Branch A and Branch B is two way merge.
-<code><pre>
+<pre><code>
 For more clarity:
-Brach main:					Branch A:
-function awesome()			function awesome()
-{							{				
+Brach main:			Branch A:
+function awesome()	                function awesome()
+{		                {				
 
-};							};
+};			};
 
 Branch B:
 function awesome()
@@ -55,20 +55,20 @@ function moreAweosme()
 
 };
 By merging A and B, we are basically getting the file B. If there are changes in both files, two way merge fails.
-</pre></code>
+</code></pre>
 
-h5. Three Way merge.
+h4. Three Way merge.
 This way of merging succeds if there are changes in both files.
 Blocks that have changed in neither of the files will be left as they are, Block changed in one file will be added to the new file.blocks which are changed in both files,user will be asked to resolve the conflicts. 
 
-h5. Recursive three way merge.
+h4. Recursive three way merge.
 If two branches doesn't have unique lowest common ancestor, then it merges those ancestors to form another ancestor and continues this process recursively.
 This technique is incorporated by git.
 
-h5. What is Unison?
+h4. What is Unison?
 Unison is also synchroniser which use the same rsync algorithm.
 
-h5. some differences between rsync and csync2
+h4. some differences between rsync and csync2
 
 | rsync | csync2 |
 | Its used for mirroring | Its synchronizer |
