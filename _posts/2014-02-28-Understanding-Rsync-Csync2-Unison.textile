@@ -12,13 +12,13 @@ rsync is simply a program which manages to minimise the data transfer when it ha
 
 h4. How rsyn works?
 
-Sending the whole data of file is meaning less if we are syncing the similar files. Instead of sending the whole data, we send only the changes.
+Sending the whole data of file is meaning less if we are syncing the similar files. Instead of sending the whole data, we can send only the changes.
 
 Lets say we have two hosts, host A and host B. host A contains file a and host B contains file b. file a and file b are similar.
 
 Host A divides the file a into some blocks of specific width and calculates the checksums of the blocks and the sends the data to the other Host B.Host B then identifies which parts of the file A is similar to file b and sends the changes to the Host A.then Host A writes the changes to the file A.
 
-rsync doesn't the store the state of the previous versions of the file. rather it communicates the present state od the file with other hosts.
+rsync doesn't the store the state of the previous versions of the file. rather it communicates the present state of the file with other hosts.
 
 h4. What is csync2?
 
@@ -26,10 +26,10 @@ csync2 is cluster asynchronous file synchronization. (As it is asynchronus, this
 
 h4. How csync2 works?
 
-csync2 creates a database in the host and stores the changes in the database.In this approach implies that
+csync2 creates a database in the host and stores the changes in the database.In this approach the
 csync2 can only push changes from the machine on which the changes has been performed to the other machines in the cluster.
 
-So this is how it works, when we sync two hosts.
+And this is how it works, when we sync two hosts.
 
 Csync finds a lowest common unique ancestor of the two hosts and does three way merge. There are so many type conflict resolving techniques incorporated in the csync2.
 
