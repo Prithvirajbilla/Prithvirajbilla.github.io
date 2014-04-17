@@ -7,7 +7,7 @@ tags: [about]
 modified: 9-4-2014
 comments: true
 image:
-  feature: iitb.jpg
+  feature: texture-feature-04.jpg
 ---
 
 
