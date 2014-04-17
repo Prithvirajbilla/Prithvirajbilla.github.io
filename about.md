@@ -7,8 +7,8 @@ tags: [about]
 modified: 9-4-2014
 comments: true
 image:
-  feature: texture-feature-02.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: iitb.jpg
 ---
 
+
+I'm Prithviraj M Billa, currently pursuing B Tech in Computerscience at IITB. I like to code.
